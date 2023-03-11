@@ -135,7 +135,7 @@ html {
     height: 2px;
     background: linear-gradient(270deg, transparent, #03e9f4);
     animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
+    animation-delay: .5s;
   }
   
   @keyframes btn-anim3 {
