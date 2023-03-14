@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: #ddd;
+  padding: 15px 50px;
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  margin-left: 50px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.nav-links li:nth-of-type(1):hover ~ li a {
+  filter: blur(3px);
+  color: #000;
+}
+
+.nav-links li:nth-of-type(2):hover ~ li a {
+  filter: blur(3px);
+  color: #000;
+}
+
+.nav-links li:nth-of-type(3):hover ~ li a {
+  filter: blur(3px);
+  color: #000;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  padding: 25px;
+  display: inline-block;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(119,82,80,0.6)  ;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.con-image img{
+  background-size: cover;
+  background-position: center center;
+  width: auto;
+  height: auto;
+  filter: blur(2px) sepia(30%);
+}
+
+.gradient h2 {
+  position: absolute;
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  color: #eee;
+  transform: translate(-50%, -50%);
+}
+
+.gradient h3 {
+  position: absolute;
+  font-size: 45px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  top: 52%;
+  left: 50%;
+  color: #ddd;
+  transform: translate(-50%, -50%);
+}
