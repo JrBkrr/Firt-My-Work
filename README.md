@@ -1,1 +1,1 @@
-# MyApp İlk denemelerim
+# MyApp
