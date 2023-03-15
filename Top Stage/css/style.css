@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'searchfont';
-  src: url('font/searchfont.eot?53015494');
-  src: url('font/searchfont.eot?53015494#iefix') format('embedded-opentype'),
-       url('font/searchfont.woff2?53015494') format('woff2'),
-       url('font/searchfont.woff?53015494') format('woff'),
-       url('font/searchfont.ttf?53015494') format('truetype'),
-       url('font/searchfont.svg?53015494#searchfont') format('svg');
+  src: url('../font/searchfont.eot?53015494');
+  src: url('../font/searchfont.eot?53015494#iefix') format('embedded-opentype'),
+       url('../font/searchfont.woff2?53015494') format('woff2'),
+       url('../font/searchfont.woff?53015494') format('woff'),
+       url('../font/searchfont.ttf?53015494') format('truetype'),
+       url('../font/searchfont.svg?53015494#searchfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,7 @@
 
 .icon-globe:before { content: '\e800'; } /* '' */
 .icon-home:before { content: '\e801'; } /* '' */
+.icon-plus-circled:before { content: '\e802'; } /* '' */
 .icon-fast-food:before { content: '\e815'; } /* '' */
 .icon-cab:before { content: '\f1b9'; } /* '' */
 .icon-shopping:before { content: '\f290'; } /* '' */
@@ -60,12 +61,6 @@ input, select {
 
 form {
   display: inline-flex;
-}
-
-main {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
 }
 
 a {
@@ -107,7 +102,7 @@ header .logo {
   text-decoration: none;
   color: #eee;
   font-family: Arial, sans-serif;
-  margin-left: 200px;
+  margin-left: 300px;
 }
 
 .add-your li a {
@@ -169,7 +164,7 @@ header .logo {
   opacity: 1;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  top: 50%;
+  top: 42%;
   left: 50%;
   color: #eee;
   transform: translate(-50%, -50%);
@@ -194,13 +189,13 @@ main input, select{
   color: #000;
   font-size: 20px;
   width: 380px;
-  height: 70px;
+  height: 80px;
 }
 
 main form {
   position: absolute;
   display: flex;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 90px;
@@ -215,22 +210,60 @@ form #select-box {
   width: 420px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+form #select-box:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 10px #4CAF50;
+  transition: .5s;
 }
 
 form #search-2 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #1b9ac9;
+  transition: all 0.5s ease-in-out;
+}
+
+#select-box2:hover {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 10px #4CAF50;
+  transition: .5s;
 }
 
 .icons {
   position: absolute;
   display: inline-flex;
-  top: 50%;
-  left: 50%;
+  top: 62%;
+  left: 55%;
   transform: translate(-50%, -50%);
 }
 
 .icons i {
-  font-size: 100px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  color: cadetblue;
+  border-radius: 50%;
+  font-size: 35px;
+  padding: 5px;
+  margin-right: 130px;
+}
+
+.icons i::before {
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.icons i p {
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
 }
