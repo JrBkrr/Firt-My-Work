@@ -1,61 +1,152 @@
+@font-face {
+  font-family: 'searchfont';
+  src: url('font/searchfont.eot?53015494');
+  src: url('font/searchfont.eot?53015494#iefix') format('embedded-opentype'),
+       url('font/searchfont.woff2?53015494') format('woff2'),
+       url('font/searchfont.woff?53015494') format('woff'),
+       url('font/searchfont.ttf?53015494') format('truetype'),
+       url('font/searchfont.svg?53015494#searchfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "searchfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-globe:before { content: '\e800'; } /* '' */
+.icon-home:before { content: '\e801'; } /* '' */
+.icon-fast-food:before { content: '\e815'; } /* '' */
+.icon-cab:before { content: '\f1b9'; } /* '' */
+.icon-shopping:before { content: '\f290'; } /* '' */
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #000;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+input, select {
+  text-decoration: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  display: inline-flex;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+header {
+  background-image: url(../image/index3.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: content;
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.8)); */
 }
 
 nav {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   display: inline-flex;
   border: none;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid gray;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background-color: #00000048;
   color: #ddd;
-  padding: 15px 50px;
+  aspect-ratio: 4/1;
+  height: 120px;
 }
 
-.logo a {
+header .logo {
+  display: inline-flex;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   color: #eee;
   font-family: Arial, sans-serif;
-  margin-left: 50px;
+  margin-left: 200px;
+}
+
+.add-your li a {
+  background-color: #fff;
+  height: 20px;
+  padding: 14.5px;
+  width: 200px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: #eee;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: .5s;
+  border-radius: 10px;
+}
+
+.listing .add-your a {
+  color: #2596be;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  margin: 0;
+  padding: 0;
+  width: auto;
   list-style: none;
-  margin: 0 auto;
+  margin-right: 300px;
+  padding: 15px;
 }
 
-.nav-links li:nth-of-type(1):hover ~ li a {
-  filter: blur(3px);
-  color: #000;
-}
-
-.nav-links li:nth-of-type(2):hover ~ li a {
-  filter: blur(3px);
-  color: #000;
-}
-
-.nav-links li:nth-of-type(3):hover ~ li a {
-  filter: blur(3px);
-  color: #000;
-}
-
-.nav-links li a {
+.nav-links > li a {
   text-decoration: none;
   color: #eee;
-  font-size: 18px;
+  font-size: 15px;
+  margin-right: 35px;
   font-weight: bold;
   font-family: Arial, sans-serif;
   padding: 25px;
@@ -65,40 +156,81 @@ nav {
 }
 
 .nav-links li a:hover {
-  background-color: rgba(119,82,80,0.6)  ;
-  transition: .5s;
-  border-radius: 5px;
+  color: #2596be;
+  background-color: white; 
+  transition: .3s;
 }
 
-.con-image img{
-  background-size: cover;
-  background-position: center center;
-  width: auto;
-  height: auto;
-  filter: blur(2px) sepia(30%);
-}
-
-.gradient h2 {
+.main-text {
   position: absolute;
   margin: 0 auto;
-  font-size: 30px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 1;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   top: 50%;
   left: 50%;
   color: #eee;
   transform: translate(-50%, -50%);
+  aspect-ratio: 4/1;
+  width: 0 auto;
 }
 
-.gradient h3 {
-  position: absolute;
-  font-size: 45px;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
+.main-text h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+input::-webkit-input-placeholder {
+  color: #000;
   font-family: Arial, sans-serif;
-  top: 52%;
+}
+
+main input, select{
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  width: 380px;
+  height: 70px;
+}
+
+main form {
+  position: absolute;
+  display: flex;
+  top: 50%;
   left: 50%;
-  color: #ddd;
   transform: translate(-50%, -50%);
+  margin-top: 90px;
+  width: auto;
+}
+
+main form input, select:focus {
+  outline: none;
+}
+
+form #select-box {
+  width: 420px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+form #search-2 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #1b9ac9;
+}
+
+.icons {
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons i {
+  font-size: 100px;
 }
