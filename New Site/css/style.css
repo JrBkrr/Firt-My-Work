@@ -39,6 +39,7 @@
 
     .shrink {
         opacity: 0.9;
+        filter: blur(1px);
     }
 
     .nav-menu.shrink, li a {
@@ -51,6 +52,7 @@
         height: 150px;
         transition: all 0.3s ease-in-out;
         background-color: #5549498a;
+        filter: none;
         opacity: 1;
     }
 
@@ -63,11 +65,9 @@
         box-shadow: 0 0 29px #000;
         border-radius: 2px;
         transition: all .3s;
-        filter: blur(0px);
     }
 
     .nav-menu li a:hover {
-        filter: blur(0px);
         background-color: #554949;
         color: #eee;
         transition: all .3s;
